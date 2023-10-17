@@ -122,13 +122,15 @@ const clickLetra = (event) => {
             palabraAdivinada[i] = letraUsuario
           }
         }
-        event.target.classList.add("bg-success","text-white","disabled")
+        event.target.classList.add("bg-success","text-white")
+        event.target.disabled = true
         
       } else {
 
         contFallos = contFallos-1
-        event.target.classList.add("bg-danger","text-white","border-danger","disabled")
-
+        event.target.classList.add("bg-danger","text-white","border-danger")
+        event.target.disabled = true
+        
         if (contFallos > 0) {
           imagen.src="imagenes/ahorcado_"+contFallos+".png"
           intentos.textContent=contFallos
